@@ -12,8 +12,7 @@ v 표시가 완료됨을 의미함
 
 ###시연영상
 
-![Uploading GIFMaker_me.gif…]()
-
+https://gifmaker.me/video-to-gif/viewimage/20240513-13-1xjrU44gTWPzSEon-aqtEEa-HNET
 
 ### 모든 요구사항 적용
 
