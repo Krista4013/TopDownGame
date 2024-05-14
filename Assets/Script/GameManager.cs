@@ -5,13 +5,12 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 
-public class GameManager : MonoBehaviour
+public partial class GameManager : MonoBehaviour
 {
     [SerializeField]
     private Text TimeTxt;
     [SerializeField]
     private GameObject StartUI;
-
     [SerializeField]
     private GameObject Select;
     [SerializeField]
@@ -42,9 +41,18 @@ public class GameManager : MonoBehaviour
     private GameObject ChangeUI;
     [SerializeField]
     private GameObject changeCharacterUI;
+    [SerializeField]
+    private GameObject LeftUI;
+    [SerializeField]
+    private GameObject SmallLeftUI;
+    [SerializeField]
+    private Text NpcName;
+    [SerializeField]
+    private GameObject NpcList;
 
     public bool SelectG = false;
     public bool SelectB = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +65,18 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         TimeTxt.text = DateTime.Now.ToString("HH : mm");
+
+        List<string> List = new List<string>();
+
+        List.Add(NpcName.text);
+        List.Add(PlayerName.text);
+        string F = "";
+        int index = 1;
+        foreach (string i in List)
+        {
+            F += (index++ + ". " + i + "\n"); 
+        }
+        NpcList.GetComponent<Text>().text = F;
     }
 
     public void SelectBtn()
@@ -139,5 +159,16 @@ public class GameManager : MonoBehaviour
         MainSprite2.SetActive(true);
         changeCharacterUI.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void OpenLeftUI()
+    {
+        SmallLeftUI.SetActive(false);
+        LeftUI.SetActive(true);
+    }
+    public void CloseLeftUI()
+    {
+        LeftUI.SetActive(false);
+        SmallLeftUI.SetActive(true);
     }
 }
