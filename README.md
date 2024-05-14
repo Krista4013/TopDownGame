@@ -12,7 +12,8 @@ v 표시가 완료됨을 의미함
 
 ###시연영상
 
-https://gifmaker.me/video-to-gif/viewimage/20240513-13-1xjrU44gTWPzSEon-aqtEEa-HNET
+![GIFMaker_me](https://github.com/Krista4013/TopDownGame/assets/166012864/c3d3c668-69e8-4229-9e8f-04ba8d3ccce8)
+
 
 ### 모든 요구사항 적용
 
